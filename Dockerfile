@@ -6,6 +6,6 @@ COPY . /app
 
 EXPOSE 8085
 
-CMD ["gradlew", "build"]
+CMD ["./gradlew", "build"]
 
 CMD ["java", "-jar", "/app/build/libs/platform-0.0.1-SNAPSHOT.jar"]
