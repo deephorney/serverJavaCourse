@@ -1,11 +1,11 @@
-FROM openjdk:17
+FROM openjdk:21
 
 WORKDIR /app
 
 COPY . /app
 
-COPY ./build/libs /app
+COPY build /app/
 
 EXPOSE 8081
 
-ENTRYPOINT [ "java","-jar","platform-0.0.1-SNAPSHOT-plain.jar" ]
+CMD ["java", "-jar", "/app/build/libs/platform-0.0.1-SNAPSHOT-plain.jar"]
