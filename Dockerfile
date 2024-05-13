@@ -6,4 +6,4 @@ COPY . /app
 
 EXPOSE 8081
 
-ENTRYPOINT [ "java","-jar","/app/build/libs/platform-0.0.1-SNAPSHOT.jar" ]
+ENTRYPOINT [ "java","-jar","/app/build/libs/platform-0.0.1-SNAPSHOT-plain.jar" ]
