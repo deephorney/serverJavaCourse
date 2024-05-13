@@ -37,7 +37,7 @@ public class MainController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @DeleteMapping("/music/{musicId}/like")
+    @GetMapping("/music/{musicId}/like")
     public ResponseEntity<?> removeLikedMusic(Principal principal, @PathVariable Long musicId) {
         userService.removeLikedMusic(principal.getName(), musicId);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();

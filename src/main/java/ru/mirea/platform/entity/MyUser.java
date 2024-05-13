@@ -15,7 +15,7 @@ public class MyUser {
     private Long id;
     private String username;
     private String password;
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany()
     @JoinColumn(name = "music_id")
     private List<Music> likedMusic=new ArrayList<>();
 
