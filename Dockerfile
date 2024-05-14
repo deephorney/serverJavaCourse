@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . /app
 
-EXPOSE 8085
+EXPOSE 8080
 
-CMD sh -c './gradlew build && for f in /app/build/libs/*.jar; do java -jar "$f"; done'
+CMD ["java", "-jar", "/app/build/libs/platform-0.0.1-SNAPSHOT.jar"]
